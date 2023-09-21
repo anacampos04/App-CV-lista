@@ -1,0 +1,8 @@
+{
+  "name": "Lista",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "ecdde35e"
+}
