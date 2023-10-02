@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor() {}
+  contador:number;
+  constructor() {
+   this.contador=0 
+  }
+  sumar(){
+    this.contador++
+  }
+  //lista = ["pepe", "maria","juan"]
+  lista = [["pepe", 23], ["maria",43],["juan", 14]]
 
 }

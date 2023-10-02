@@ -12,6 +12,20 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
+<!--<ion-content>
+  <p>Puntos</p>
+  <p>Tiros libres</p>
+  <p>Dobles</p>
+  <p>Triples</p>
+ <ion-button (click)="sumar()" color="{{lista[cont%3]}}">Sumar puntos</ion-button>
 
+  <ion-button (click)="sumar()">Sumar puntos</ion-button>
+</ion-content> -->
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let item of lista">{{item}}</ion-card>
+  </ion-list>
+</ion-content>
   <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
