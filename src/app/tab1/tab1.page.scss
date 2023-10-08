@@ -3,3 +3,7 @@ ion-button[slot='fixed'] {
     top: 50%;
     right: 20px;
   }
+  ion-thumbnail {
+    --size: 200px;
+    --border-radius: 20px;
+  }
