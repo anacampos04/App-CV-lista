@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+    <ion-title color="primary">
+      <h1>Experiencia laboral</h1>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of listaTrabj"><ion-icon name="checkmark-outline"></ion-icon>{{item}}</ion-item>
+  </ion-list>
+  <ion-card color="tertiary">
+    <ion-card-header>
+      <ion-card-title>
+        <h2>Años cotizados:</h2>
+      </ion-card-title>
+      <ion-card-subtitle>
+        <h3>{{contador}}</h3>
+      </ion-card-subtitle>
+    </ion-card-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-card-content>
+
+      <ion-button color="secondary" (click)="sumar()" (click)="setOpen(true)">Añadir años de experiencia laboral</ion-button>
+    </ion-card-content>
+    <ion-toast [isOpen]="isToastOpen" message="Vas a jubilarme" [duration]="6000"
+      (didDismiss)="setOpen(false)"></ion-toast>
+  </ion-card>
+
 </ion-content>
