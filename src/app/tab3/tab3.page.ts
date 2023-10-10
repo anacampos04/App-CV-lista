@@ -7,25 +7,33 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
   contador:number
-  mensaje:string;
+  mensaje:string
 
-  isToastOpen = true;
+  isToastOpen = false;
   
   constructor() {
+    this.mensaje=""
     this.contador=3
-    this.mensaje="Mi vida laboral acaba de comenzar"
   }
+  listaTrabj = [["Teleoperadora", "5 meses"], ["Responsable Dpto SEO en agencia de Marketing digital", "24 meses"], ["Fotógrafa", "18 meses"]]
+
   sumar(){
     this.contador++
-    if(this.contador>=37){
+    if(this.contador==37){
+      this.mensaje="Hora de jubilarse!!:)"
+      this.mostrarToast();
+    }
+    else if(this.contador >= 38){
+      this.isToastOpen=false;
+      this.mensaje="No, no, ahora ya estoy jubilada, no hay vuelta atrás ;)"
+      this.mostrarToast();
     }
   }
-  exp = [["pepe", 23], ["maria",43],["juan", 14]]
-  listaTrabj = [["Teleoperadora", "5 meses"], ["Responsable Dpto SEO en agencia de Marketing digital", "24 meses"], ["Fotógrafa", "18 meses"]]
   
-  
-
-  setOpen(isOpen: boolean) {
-    this.isToastOpen = isOpen;
+  mostrarToast() {
+    this.isToastOpen = true;
+    setTimeout(() => {
+      this.isToastOpen = false;
+    }, 5000); // Cierra el Toast después de 6 segundos
   }
 }

@@ -13,6 +13,7 @@
   <ion-card color="tertiary">
     <ion-card-header>
       <ion-card-title>
+        <!--¿Me ayudarías a jubilarme?-->
         <h2>Años cotizados:</h2>
       </ion-card-title>
       <ion-card-subtitle>
@@ -21,11 +22,9 @@
     </ion-card-header>
 
     <ion-card-content>
-
-      <ion-button color="secondary" (click)="sumar()" (click)="setOpen(true)">Añadir años de experiencia laboral</ion-button>
+      <ion-button color="secondary" (click)="sumar()">Añadir años de experiencia laboral</ion-button>
     </ion-card-content>
-    <ion-toast [isOpen]="isToastOpen" message="Vas a jubilarme" [duration]="6000"
-      (didDismiss)="setOpen(false)"></ion-toast>
+    <ion-toast [isOpen]="isToastOpen" message="{{mensaje}}"></ion-toast>
   </ion-card>
 
 </ion-content>
