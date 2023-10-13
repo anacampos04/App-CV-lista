@@ -34,6 +34,6 @@ export class Tab3Page {
     this.isToastOpen = true;
     setTimeout(() => {
       this.isToastOpen = false;
-    }, 5000); // Cierra el Toast después de 6 segundos
+    }, 5000); // Cierra el Toast después de 5 segundos
   }
 }
